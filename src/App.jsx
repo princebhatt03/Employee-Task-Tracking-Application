@@ -9,6 +9,7 @@ import AdminDashboard from './components/Dashboard/AdminDashboard';
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard';
 
 import { useAuth } from './context/AuthContext'; // Import useAuth to check auth status
+import HomePage from './HomePage';
 
 // PrivateRoute component to protect routes based on authentication and roles
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -57,6 +58,10 @@ function App() {
     <div>
       <Routes>
         {/* Public Routes */}
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
         <Route
           path="/login"
           element={<Login />}
