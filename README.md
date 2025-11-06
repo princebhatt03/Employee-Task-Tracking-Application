@@ -79,18 +79,20 @@ You can run this project in **two ways**:
    ```bash
    cd backend
    ```
-Install dependencies:
+   
+2. Install dependencies:
 ```
 npm install
 ```
 
-Create a .env file (use .env.example as reference) and configure:
+ 3. Create a .env file (use .env.example as reference) and configure:
 ```env
 MONGODB_URI=<your_mongodb_connection_string>
 JWT_SECRET=<your_secret_key>
 PORT=5000
 ```
-Start the backend server:
+
+ 4. Start the backend server:
 ```
 nodemon server.js
 ```
@@ -103,29 +105,31 @@ Backend will start on: http://localhost:5000
 
 ### Frontend Setup
 
-From the root folder:
+ 1. From the root folder:
 ```
 npm install
 
 ```
-Start the frontend:
+
+ 2. Start the frontend:
 ```
 npm run dev
 
 ```
+
 Frontend will start on: http://localhost:5173
 
 ### 🐳 Option 2: Using Docker (Recommended)
 
 This project is fully Dockerized — no manual environment setup needed.
 
-Clone the repository:
+ 1. Clone the repository:
 ```
 git clone github_repo_url
 cd folder_name
 ```
 
-Build and start containers:
+ 2. Build and start containers:
 ```
 docker-compose up --build
 ```
