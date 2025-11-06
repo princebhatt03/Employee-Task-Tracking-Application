@@ -75,9 +75,10 @@ You can run this project in **two ways**:
 ### 🧩 **Option 1: Using Node.js (Manual Setup)**
 
 #### **Backend Setup**
+
  1. Clone the repository:
 ```
-git clone [https://github.com/princebhatt03/Employee-Task-Tracking-Application](https://github.com/princebhatt03/Employee-Task-Tracking-Application)
+git clone https://github.com/princebhatt03/Employee-Task-Tracking-Application
 cd folder_name
 ```
 
