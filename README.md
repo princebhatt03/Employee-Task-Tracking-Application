@@ -75,24 +75,30 @@ You can run this project in **two ways**:
 ### 🧩 **Option 1: Using Node.js (Manual Setup)**
 
 #### **Backend Setup**
-1. Navigate to the backend folder:
+ 1. Clone the repository:
+```
+git clone [https://github.com/princebhatt03/Employee-Task-Tracking-Application](https://github.com/princebhatt03/Employee-Task-Tracking-Application)
+cd folder_name
+```
+
+ 2. Navigate to the backend folder:
    ```bash
    cd backend
    ```
    
-2. Install dependencies:
+ 3. Install dependencies:
 ```
 npm install
 ```
 
- 3. Create a .env file (use .env.example as reference) and configure:
+ 4. Create a .env file (use .env.example as reference) and configure:
 ```env
 MONGODB_URI=<your_mongodb_connection_string>
 JWT_SECRET=<your_secret_key>
 PORT=5000
 ```
 
- 4. Start the backend server:
+ 5. Start the backend server:
 ```
 nodemon server.js
 ```
@@ -123,13 +129,7 @@ Frontend will start on: http://localhost:5173
 
 This project is fully Dockerized — no manual environment setup needed.
 
- 1. Clone the repository:
-```
-git clone github_repo_url
-cd folder_name
-```
-
- 2. Build and start containers:
+ Build and start containers:
 ```
 docker-compose up --build
 ```
