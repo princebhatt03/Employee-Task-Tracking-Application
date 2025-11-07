@@ -1,0 +1,137 @@
+🧩 Project Overview
+
+Project Name: Employee Task Management Application
+Stack Used:
+
+🚀 HOW TO RUN LOCALLY (using Node.js)
+Step 1: Clone the repository
+git clone repo_url
+cd folder_name
+
+Step 2: Setup the Backend
+
+1️⃣ Navigate to backend folder:
+
+cd backend
+
+
+2️⃣ Install dependencies:
+
+npm install
+
+
+3️⃣ Create .env file (if not already present):
+
+cp .env.example .env
+
+
+4️⃣ Open .env and fill in the correct values (e.g. MongoDB Atlas URI):
+
+PORT=5000
+MONGODB_URI=your-mongodb-atlas-connection-string
+JWT_SECRET=your-secret-key
+
+
+5️⃣ Start the backend server:
+
+npm run dev
+
+
+or (if you use plain Node)
+
+node server.js
+
+
+✅ Backend will start on:
+
+http://localhost:5000
+
+Step 3: Setup the Frontend
+
+1️⃣ Go back to the root folder:
+
+cd ..
+
+
+2️⃣ Install dependencies:
+
+npm install
+
+
+3️⃣ Create a .env file in the root folder:
+
+VITE_API_URL=http://localhost:5000/api
+
+
+4️⃣ Run the development server:
+
+npm run dev
+
+
+✅ Frontend will start on:
+
+http://localhost:5173
+
+
+5️⃣ Now open your browser and visit:
+
+http://localhost:5173
+
+
+Your app should be live with full functionality 🎉
+
+🐳 HOW TO RUN WITH DOCKER
+
+Make sure you have Docker and Docker Compose installed.
+MongoDB Atlas will still be used (no local DB container needed).
+
+Step 1: Clone the repository
+git clone repo_url
+cd folder_name
+
+Step 2: Verify Backend .env
+
+Inside the /backend folder, ensure you have a .env file with:
+
+PORT=5000
+MONGODB_URI=your-mongodb-atlas-connection-string
+JWT_SECRET=your-secret-key
+
+
+✅ Docker Compose automatically loads this environment file.
+
+Step 3: Build and Start Containers
+
+From the project root, run:
+
+docker-compose up --build
+
+
+🧱 This will:
+
+Build the backend (Node + Express)
+
+Build the frontend (Vite + React + Nginx)
+
+Start both containers in a shared network
+
+Step 4: Access the Application
+
+After the build completes:
+
+Frontend → http://localhost:5173
+
+Backend API → http://localhost:5000/api
+
+Both will be connected automatically inside Docker.
+
+Step 5: Stop Containers
+
+To stop all containers:
+
+docker-compose down
+
+
+To rebuild and restart clean:
+
+docker-compose up --build --force-recreate
