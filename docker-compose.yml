@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    container_name: employee-task-backend
+    restart: always
+    ports:
+      - '5000:5000'
+    env_file:
+      - ./backend/.env
+    environment:
+      - NODE_ENV=production
+    # MongoDB Atlas is remote, no need for depends_on
+    networks:
+      - app-network
+
+  frontend:
+    build: .
+    container_name: employee-task-frontend
+    restart: always
+    ports:
+      - '5173:80'
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
